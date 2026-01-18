@@ -1,32 +1,68 @@
-https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml  （まとめフィード）  [oai_citation:0‡Qiita](https://qiita.com/yamadashy/items/0130e3e569b0832bc51f?utm_source=chatgpt.com)
+# 企業テックブログ横断（多数の国内企業テックブログをまとめて購読）
+https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml
 
-# テックブログ
-https://tech.mercari.com/rss                          （メルカリ エンジニアブログ）  [oai_citation:1‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
-https://dev.classmethod.jp/feed                       （クラスメソッド DevelopersIO）  [oai_citation:2‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
-https://engineering.dena.com/index.xml                （DeNA Engineers’ Blog）  [oai_citation:3‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
-https://blog.recruit.co.jp/data/index.xml              （リクルート Tech Blog）  [oai_citation:4‡Qiita](https://qiita.com/mnoguchi/items/6e16ed2999fd33c44a25?utm_source=chatgpt.com)
-https://techblog.zozo.com/rss                          （ZOZO Technologies TECH BLOG）  [oai_citation:5‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
-https://techlife.cookpad.com/feed                      （クックパッド Tech Blog）  [oai_citation:6‡〖公式〗ブラストエンジン（blastengine）｜API連携・SMTPリレー](https://blastengine.jp/blog_content/tech-blog/?utm_source=chatgpt.com)
-https://inside.pixiv.blog/feed.xml                     （pixivinside）  [oai_citation:7‡〖公式〗ブラストエンジン（blastengine）｜API連携・SMTPリレー](https://blastengine.jp/blog_content/tech-blog/?utm_source=chatgpt.com)
-https://developers.cyberagent.co.jp/blog/feed          （サイバーエージェント Developers Blog）  [oai_citation:8‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
-https://engineers.ntt.com/feed                         （NTTエンジニアブログ）  [oai_citation:9‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
-https://techblog.lycorp.co.jp/ja/feed/index.xml        LINEヤフー Tech Blog
-https://www.ai-shift.co.jp/techblog/feed                  AI Shift テックブログ（AI事例・技術）  
-https://blog.brainpad.co.jp/rss                           ブレインパッド Tech Blog（AI・データ分析寄り）  
-https://openai.com/blog/rss.xml                           OpenAI Blog（AI最前線）  
-https://deepmind.com/blog/feed/basic/                      DeepMind Research Blog  
-https://huggingface.co/blog/feed.xml                       Hugging Face Blog
-https://feeds.feedburner.com/blogspot/gJZg                  Google AI Blog（RSS）  [oai_citation:3‡Qiita](https://qiita.com/LittleWat/items/f35b55434c41cbed0033?utm_source=chatgpt.com)
+# メルカリのエンジニアリング・ML・データ基盤の発信
+https://tech.mercari.com/rss
 
-# その他技術情報源
-https://feed.infoq.com/jp/ai-ml-data-eng/              （InfoQ 日本語版 AI/データ関連）  [oai_citation:11‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
-https://qiita.com/popular-items/feed                  （Qiita 人気記事）  [oai_citation:12‡Zenn](https://zenn.dev/tatehito/articles/ef0dea8facf31c?utm_source=chatgpt.com)
-https://zenn.dev/feed                                  （Zenn 全体フィード）  [oai_citation:13‡Zenn](https://zenn.dev/tatehito/articles/ef0dea8facf31c?utm_source=chatgpt.com)
+# クラスメソッドのクラウド・データ・生成AI事例が多い技術ブログ
+https://dev.classmethod.jp/feed
 
-# 横断・まとめ系
-https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml   企業テックブログ横断RSS（約500社）  [oai_citation:0‡Yamadashy](https://yamadashy.github.io/tech-blog-rss-feed/?utm_source=chatgpt.com)
-https://univac-1.github.io/ai-info-rss-feed/                    AI関連情報まとめRSS  [oai_citation:1‡Univac 1](https://univac-1.github.io/ai-info-rss-feed/?utm_source=chatgpt.com)
-https://r-kagaya.github.io/llm-tech-blog-rss-feed/              生成AI・LLM関連テックブログRSS  [oai_citation:2‡R-Kagaya](https://r-kagaya.github.io/llm-tech-blog-rss-feed/?utm_source=chatgpt.com)
+# DeNAのプロダクト開発・AI・データ活用に関する技術ブログ
+https://engineering.dena.com/index.xml
 
-# 一般AI情報追加（補完）
-https://www.wired.com/feed/tag/ai/latest/rss               Wired タグ「AI」最新ニュース  [oai_citation:4‡WIRED](https://www.wired.com/feed/tag/ai/latest/rss?utm_source=chatgpt.com)
+# リクルートのデータサイエンス・機械学習寄り技術ブログ
+https://blog.recruit.co.jp/data/index.xml
+
+# ZOZOのレコメンド・データ・検索技術などの発信
+https://techblog.zozo.com/rss
+
+# クックパッドの検索・推薦・ML基盤に関する技術ブログ
+https://techlife.cookpad.com/feed
+
+# pixivの推薦・検索・画像処理などの技術ブログ
+https://inside.pixiv.blog/feed.xml
+
+# サイバーエージェントの広告・生成AI・ML研究寄り技術ブログ
+https://developers.cyberagent.co.jp/blog/feed
+
+# NTTグループの研究・AI・通信×機械学習の技術ブログ
+https://engineers.ntt.com/feed
+
+# LINEヤフーの大規模システム・検索・AI活用の技術ブログ
+https://techblog.lycorp.co.jp/ja/feed/index.xml
+
+# AI Shift（サイバーエージェント系）のAI実装・事例中心テックブログ
+https://www.ai-shift.co.jp/techblog/feed
+
+# ブレインパッドのデータ分析・機械学習・AI活用ブログ
+https://blog.brainpad.co.jp/rss
+
+# OpenAI公式の研究・プロダクト・モデル更新ブログ
+https://openai.com/blog/rss.xml
+
+# Google DeepMindの研究・AI安全性・基盤モデルのブログ
+https://deepmind.com/blog/feed/basic/
+
+# Hugging FaceのOSS・LLM・モデル運用に関するブログ
+https://huggingface.co/blog/feed.xml
+
+# Google AI公式ブログ（研究・プロダクト横断）
+https://feeds.feedburner.com/blogspot/gJZg
+
+# InfoQ日本語版のAI・機械学習・データエンジニアリング記事
+https://feed.infoq.com/jp/ai-ml-data-eng/
+
+# Qiitaの人気技術記事（AI以外も混ざるがトレンド把握用）
+https://qiita.com/popular-items/feed
+
+# Zenn全体フィード（生成AI・LLM記事が比較的多い）
+https://zenn.dev/feed
+
+# AI関連ニュース・論文・ブログを横断収集するまとめRSS
+https://univac-1.github.io/ai-info-rss-feed/
+
+# 生成AI・LLMに特化した国内テックブログ横断RSS
+https://r-kagaya.github.io/llm-tech-blog-rss-feed/
+
+# 海外AIニュース（研究・産業動向の補完）
+https://www.wired.com/feed/tag/ai/latest/rss
