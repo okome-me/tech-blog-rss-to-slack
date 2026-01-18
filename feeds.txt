@@ -1,0 +1,32 @@
+https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml  （まとめフィード）  [oai_citation:0‡Qiita](https://qiita.com/yamadashy/items/0130e3e569b0832bc51f?utm_source=chatgpt.com)
+
+# テックブログ
+https://tech.mercari.com/rss                          （メルカリ エンジニアブログ）  [oai_citation:1‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
+https://dev.classmethod.jp/feed                       （クラスメソッド DevelopersIO）  [oai_citation:2‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
+https://engineering.dena.com/index.xml                （DeNA Engineers’ Blog）  [oai_citation:3‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
+https://blog.recruit.co.jp/data/index.xml              （リクルート Tech Blog）  [oai_citation:4‡Qiita](https://qiita.com/mnoguchi/items/6e16ed2999fd33c44a25?utm_source=chatgpt.com)
+https://techblog.zozo.com/rss                          （ZOZO Technologies TECH BLOG）  [oai_citation:5‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
+https://techlife.cookpad.com/feed                      （クックパッド Tech Blog）  [oai_citation:6‡〖公式〗ブラストエンジン（blastengine）｜API連携・SMTPリレー](https://blastengine.jp/blog_content/tech-blog/?utm_source=chatgpt.com)
+https://inside.pixiv.blog/feed.xml                     （pixivinside）  [oai_citation:7‡〖公式〗ブラストエンジン（blastengine）｜API連携・SMTPリレー](https://blastengine.jp/blog_content/tech-blog/?utm_source=chatgpt.com)
+https://developers.cyberagent.co.jp/blog/feed          （サイバーエージェント Developers Blog）  [oai_citation:8‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
+https://engineers.ntt.com/feed                         （NTTエンジニアブログ）  [oai_citation:9‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
+https://techblog.lycorp.co.jp/ja/feed/index.xml        LINEヤフー Tech Blog
+https://www.ai-shift.co.jp/techblog/feed                  AI Shift テックブログ（AI事例・技術）  
+https://blog.brainpad.co.jp/rss                           ブレインパッド Tech Blog（AI・データ分析寄り）  
+https://openai.com/blog/rss.xml                           OpenAI Blog（AI最前線）  
+https://deepmind.com/blog/feed/basic/                      DeepMind Research Blog  
+https://huggingface.co/blog/feed.xml                       Hugging Face Blog
+https://feeds.feedburner.com/blogspot/gJZg                  Google AI Blog（RSS）  [oai_citation:3‡Qiita](https://qiita.com/LittleWat/items/f35b55434c41cbed0033?utm_source=chatgpt.com)
+
+# その他技術情報源
+https://feed.infoq.com/jp/ai-ml-data-eng/              （InfoQ 日本語版 AI/データ関連）  [oai_citation:11‡マアサブログ](https://maasaablog.com/blog/fuv_hl9_ofym/?utm_source=chatgpt.com)
+https://qiita.com/popular-items/feed                  （Qiita 人気記事）  [oai_citation:12‡Zenn](https://zenn.dev/tatehito/articles/ef0dea8facf31c?utm_source=chatgpt.com)
+https://zenn.dev/feed                                  （Zenn 全体フィード）  [oai_citation:13‡Zenn](https://zenn.dev/tatehito/articles/ef0dea8facf31c?utm_source=chatgpt.com)
+
+# 横断・まとめ系
+https://yamadashy.github.io/tech-blog-rss-feed/feeds/rss.xml   企業テックブログ横断RSS（約500社）  [oai_citation:0‡Yamadashy](https://yamadashy.github.io/tech-blog-rss-feed/?utm_source=chatgpt.com)
+https://univac-1.github.io/ai-info-rss-feed/                    AI関連情報まとめRSS  [oai_citation:1‡Univac 1](https://univac-1.github.io/ai-info-rss-feed/?utm_source=chatgpt.com)
+https://r-kagaya.github.io/llm-tech-blog-rss-feed/              生成AI・LLM関連テックブログRSS  [oai_citation:2‡R-Kagaya](https://r-kagaya.github.io/llm-tech-blog-rss-feed/?utm_source=chatgpt.com)
+
+# 一般AI情報追加（補完）
+https://www.wired.com/feed/tag/ai/latest/rss               Wired タグ「AI」最新ニュース  [oai_citation:4‡WIRED](https://www.wired.com/feed/tag/ai/latest/rss?utm_source=chatgpt.com)
