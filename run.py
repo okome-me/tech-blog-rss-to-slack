@@ -10,25 +10,37 @@ import requests
 FEEDS_FILE = Path("feeds.txt")
 STATE_FILE = Path("notified.json")
 
-# 無制限だと荒れるので、技術的な安全弁だけ入れます（必要なら後で外せます）
-MAX_POSTS_PER_RUN = 60         # 1回の実行で最大何件流すか
-SLEEP_BETWEEN_POSTS_SEC = 0.7  # Slack連投の間隔（レート制限回避）
+# 直近何秒の重複を避けるか（1時間）
+DEDUP_WINDOW_SEC = 60 * 60
+
+# 事故防止（必要なら上げる/外す）
+MAX_POSTS_PER_RUN = 60
+SLEEP_BETWEEN_POSTS_SEC = 0.7
 
 
-def load_state():
+def load_state(now: float) -> dict[str, float]:
     if not STATE_FILE.exists():
-        return set()
+        return {}
     try:
         data = json.loads(STATE_FILE.read_text(encoding="utf-8"))
-        return set(data) if isinstance(data, list) else set()
+        if not isinstance(data, dict):
+            return {}
+        pruned = {}
+        cutoff = now - DEDUP_WINDOW_SEC
+        for k, v in data.items():
+            try:
+                ts = float(v)
+            except Exception:
+                continue
+            if ts >= cutoff:
+                pruned[k] = ts
+        return pruned
     except Exception:
-        return set()
+        return {}
 
 
-def save_state(seen):
-    # サイズが増えすぎないよう、直近のみ保持（十分大きめ）
-    keep = list(seen)[-5000:]
-    STATE_FILE.write_text(json.dumps(keep, ensure_ascii=False, indent=2), encoding="utf-8")
+def save_state(state: dict[str, float]) -> None:
+    STATE_FILE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def read_feeds():
@@ -45,7 +57,6 @@ def slack_post(webhook_url: str, title: str, link: str, source: str):
 
 
 def entry_id(entry):
-    # RSSごとに揺れるので、まずはlink優先でキーを作ります
     link = (entry.get("link") or "").strip()
     if link:
         return link
@@ -66,39 +77,42 @@ def main():
         print("feeds.txt is empty")
         return
 
-    seen = load_state()
+    now = time.time()
+    state = load_state(now)
 
     new_items = []
     for feed_url in feeds:
         d = feedparser.parse(feed_url)
         source = (d.feed.get("title") or feed_url).strip()
-        for e in d.entries[:20]:  # 各フィードから直近20件だけ見る
+        for e in d.entries[:20]:
             key = entry_id(e)
-            if key in seen:
+            # 直近1時間の重複を除外
+            ts = state.get(key)
+            if ts is not None and ts >= now - DEDUP_WINDOW_SEC:
                 continue
+
             title = (e.get("title") or "(no title)").strip()
             link = (e.get("link") or "").strip()
-            # linkが無いとSlackに流しても意味が薄いのでスキップ
             if not link:
                 continue
-            # publishedが取れるなら新しい順にしたいが、揺れるのでここでは単純に追加
             new_items.append((key, title, link, source))
 
-    # 新規が大量に出た初回だけ事故りやすいので、上限で安全に流します
     to_post = new_items[:MAX_POSTS_PER_RUN]
 
     posted = 0
     for key, title, link, source in to_post:
         try:
             slack_post(webhook, title, link, source)
-            seen.add(key)
+            state[key] = time.time()
             posted += 1
             time.sleep(SLEEP_BETWEEN_POSTS_SEC)
         except Exception as ex:
             print(f"failed: {link} ({ex})")
 
-    save_state(seen)
-    print(f"posted={posted}, discovered_new={len(new_items)}")
+    # 最後にもう一度古いものを落として保存
+    state = {k: v for k, v in state.items() if v >= time.time() - DEDUP_WINDOW_SEC}
+    save_state(state)
+    print(f"posted={posted}, discovered_new={len(new_items)}, kept_state={len(state)}")
 
 
 if __name__ == "__main__":
