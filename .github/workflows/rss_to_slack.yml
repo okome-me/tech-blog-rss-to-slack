@@ -2,7 +2,7 @@ name: RSS to Slack
 
 on:
   schedule:
-    - cron: "*/20 * * * *"   # 20分ごと（必要なら変更）
+    - cron: "*/20 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -19,15 +19,15 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
+      - name: Restore dedup cache (notified.json)
+        uses: actions/cache@v4
+        with:
+          path: notified.json
+          key: dedup-${{ github.run_id }}
+          restore-keys: |
+            dedup-
+
       - name: Run
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: python run.py
-
-      - name: Commit state
-        run: |
-          git config user.name "rss-bot"
-          git config user.email "rss-bot@users.noreply.github.com"
-          git add notified.json
-          git diff --cached --quiet || git commit -m "update notified"
-          git push
