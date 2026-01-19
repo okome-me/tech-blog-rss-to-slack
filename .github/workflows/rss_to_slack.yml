@@ -19,15 +19,32 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Restore dedup cache (notified.json)
-        uses: actions/cache@v4
-        with:
-          path: notified.json
-          key: dedup-${{ github.run_id }}
-          restore-keys: |
-            dedup-
+      - name: Restore notified.json from previous artifact (best-effort)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          gh api -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/actions/artifacts \
+            --jq '.artifacts | map(select(.name=="notified-state" and .expired==false)) | sort_by(.created_at) | last | .archive_download_url' \
+            > url.txt
+          URL=$(cat url.txt)
+          if [ -n "$URL" ] && [ "$URL" != "null" ]; then
+            curl -L -H "Authorization: Bearer $GH_TOKEN" -o state.zip "$URL"
+            unzip -o state.zip
+          else
+            echo "no previous artifact"
+          fi
+          set -e
 
       - name: Run
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: python run.py
+
+      - name: Upload notified.json as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: notified-state
+          path: notified.json
+          retention-days: 1
